@@ -1,0 +1,109 @@
+<resources>
+    <string name="app_name">Invoice management system</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_navigation_drawer">NavigationDrawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="title_activity_navigartion_drawer">NavigartionDrawer</string>
+
+    <string-array name="Primary_Units">
+        <item>Select Primary Unit</item>
+        <item>BAGS ( BAG )</item>
+        <item>BALE ( BAL )</item>
+        <item>BILLION OF UNITS ( BOU )</item>
+        <item>BOX ( BOX )</item>
+        <item>BUCKLES ( BKL )</item>
+        <item>BUNCHES ( BUN )</item>
+        <item>BUNDLES ( BDL )</item>
+        <item>CANS ( CAN )</item>
+        <item>CARTONS ( CTN )</item>
+        <item>CENTIMETERS ( CMS )</item>
+        <item>CUBIC CENTIMETERS ( CCM )</item>
+        <item>CUBIC METERS ( CBM )</item>
+        <item>DOZENS ( DOZ )</item>
+        <item>DRUMS ( DRM )</item>
+        <item>GRAMMES ( GMS )</item>
+        <item>GREAT GROSS ( GGK )</item>
+        <item>GROSS ( GRS )</item>
+        <item>GROSS YARDS ( GYD )</item>
+        <item>KILOGRAMS ( KGS )</item>
+        <item>KILOLITRE ( KLR )</item>
+        <item>KILOMETRE ( KME )</item>
+        <item>LITRE ( LTR )</item>
+        <item>METERS ( MTR )</item>
+        <item>METRIC TONS ( MTS )</item>
+        <item>MILILITRE ( MLT )</item>
+        <item>NUMBERS ( NOS )</item>
+        <item>PACKS ( PAC )</item>
+        <item>PAIRS ( PRS )</item>
+        <item>PIECES ( PCS )</item>
+        <item>QUINTAL ( QTL )</item>
+        <item>ROLLS ( ROL )</item>
+        <item>SETS ( SET )</item>
+        <item>SQUARE FEET ( SQF )</item>
+        <item>SQUARE METERS ( SQM )</item>
+        <item>THOUSANDS ( THD )</item>
+        <item>TUBES ( TUB )</item>
+        <item>UNITS ( UNT )</item>
+        <item>US GALLONS ( UGS )</item>
+        <item>YARDS ( YDS )</item>
+
+    </string-array>
+
+    <string-array name="Secondary_Units">
+        <item>Select Secondary Unit</item>
+        <item>BAGS ( BAG )</item>
+        <item>BALE ( BAL )</item>
+        <item>BILLION OF UNITS ( BOU )</item>
+        <item>BOX ( BOX )</item>
+        <item>BUCKLES ( BKL )</item>
+        <item>BUNCHES ( BUN )</item>
+        <item>BUNDLES ( BDL )</item>
+        <item>CANS ( CAN )</item>
+        <item>CARTONS ( CTN )</item>
+        <item>CENTIMETERS ( CMS )</item>
+        <item>CUBIC CENTIMETERS ( CCM )</item>
+        <item>CUBIC METERS ( CBM )</item>
+        <item>DOZENS ( DOZ )</item>
+        <item>DRUMS ( DRM )</item>
+        <item>GRAMMES ( GMS )</item>
+        <item>GREAT GROSS ( GGK )</item>
+        <item>GROSS ( GRS )</item>
+        <item>GROSS YARDS ( GYD )</item>
+        <item>KILOGRAMS ( KGS )</item>
+        <item>KILOLITRE ( KLR )</item>
+        <item>KILOMETRE ( KME )</item>
+        <item>LITRE ( LTR )</item>
+        <item>METERS ( MTR )</item>
+        <item>METRIC TONS ( MTS )</item>
+        <item>MILILITRE ( MLT )</item>
+        <item>NUMBERS ( NOS )</item>
+        <item>PACKS ( PAC )</item>
+        <item>PAIRS ( PRS )</item>
+        <item>PIECES ( PCS )</item>
+        <item>QUINTAL ( QTL )</item>
+        <item>ROLLS ( ROL )</item>
+        <item>SETS ( SET )</item>
+        <item>SQUARE FEET ( SQF )</item>
+        <item>SQUARE METERS ( SQM )</item>
+        <item>THOUSANDS ( THD )</item>
+        <item>TUBES ( TUB )</item>
+        <item>UNITS ( UNT )</item>
+        <item>US GALLONS ( UGS )</item>
+        <item>YARDS ( YDS )</item>
+
+    </string-array>
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Primary unit"
+        android:layout_margin="10dp"
+        android:textSize="25dp"
+        android:textColor="#22bf4f"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/primary_units"
+        android:background="@drawable/shape"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        >
+
+    </Spinner>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Secondary unit"
+        android:layout_margin="10dp"
+        android:textSize="25dp"
+        android:textColor="#22bf4f"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/secondary_units"
+        android:background="@drawable/shape"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+
+    </Spinner>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Conversion rate"
+        android:layout_margin="10dp"
+        android:textSize="25dp"
+        android:textColor="#22bf4f"/>
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_plus"
+        android:id="@+id/add_conversionRate"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/show_conversionSummary"
+        android:layout_margin="10dp"
+        android:textSize="25dp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="save"
+        android:id="@+id/saveUnitsButton"
+        android:background="#16d93d"
+        android:layout_margin="15dp"/>
+
+</LinearLayout>

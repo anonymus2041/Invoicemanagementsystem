@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.invoicemanagementsystem">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
+
+    <application
+        android:name=".ChannelForNotification"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SelectUnit"></activity>
+        <activity android:name=".PurchaseInvoice" />
+        <activity android:name=".UpdateInventory" />
+        <activity android:name=".customers" />
+        <activity
+            android:name=".NavigartionDrawer"
+            android:label="Invoice Management System"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".InvoiceDetails" />
+        <activity android:name=".InvoiceTest" />
+        <activity android:name=".show_inventory" />
+        <activity android:name=".addItems_activity" />
+        <activity
+            android:name=".Invoice_sample"
+            android:theme="@style/AppTheme.customTheme" />
+        <activity android:name=".TotalExpensesActivity" />
+        <activity android:name=".OutstandingRevenueActivity" />
+        <activity android:name=".InvoiceActivity" />
+        <activity android:name=".InventoryActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" />
+
+        <receiver android:name=".Notification_receiver" />
+
+        <activity android:name=".Repeating_activity" />
+    </application>
+
+</manifest>

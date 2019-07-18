@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".show_inventory"
+    android:orientation="horizontal"
+
+    >
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/purchase_round"
+            android:textStyle="bold|italic"
+            android:id="@+id/cashStatus"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/partyName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold|italic"
+            android:text="hello"
+            android:paddingTop="5dp"
+            android:textAllCaps="true"
+            android:textSize="20dp"
+            android:padding="5dp"
+            android:textColor="@android:color/holo_blue_light"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date: "
+                android:paddingLeft="5dp"
+                android:textStyle="bold|italic"
+                android:textSize="15dp"
+                android:layout_marginBottom="10dp"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Amount"
+            android:textSize="20dp"
+            android:paddingTop="10dp"
+            android:id="@+id/amountParty"
+            android:textStyle="bold|italic"
+            android:textColor="#30a13f"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

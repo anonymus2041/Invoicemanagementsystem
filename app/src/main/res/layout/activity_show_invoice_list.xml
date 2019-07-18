@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".show_inventory"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/InvoiceNo_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold|italic"
+            android:text="hello"
+            android:paddingTop="5dp"
+            android:textAllCaps="true"
+            android:textSize="20dp"
+            android:textColor="@android:color/holo_blue_light"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/qty_in_InvoicelistView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date of Invoice: "
+                android:textStyle="bold|italic"
+                android:textSize="15dp"
+                />
+            <TextView
+                android:id="@+id/InvoiceDate_listView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold|italic"
+                android:textSize="15dp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Due date"
+                android:textStyle="bold|italic"
+                android:textSize="15dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:id="@+id/DueDateInvoice_listView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:layout_marginTop="5dp"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="18dp"
+            android:text="unpaid"
+            android:background="#F4FF81"
+            android:padding="3dp"
+            android:textStyle="bold|italic"
+            android:textColor="#43A047"
+            android:id="@+id/payment_statusListView"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Amount"
+            android:textSize="20dp"
+            android:paddingTop="8dp"
+            android:textStyle="bold|italic"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+            android:textStyle="bold|italic"
+            android:textColor="#43A047"
+            android:id="@+id/Total_amountListView"/>
+    </LinearLayout>
+
+
+</LinearLayout>

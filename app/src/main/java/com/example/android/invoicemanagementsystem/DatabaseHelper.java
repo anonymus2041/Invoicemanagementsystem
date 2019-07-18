@@ -148,6 +148,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         c.close();
         return list;
     }
+    public ArrayList<InventoryItems> getOutOfStockList(){
+        String sql = "select * from inventory where qty_in_stock <=?";
+        Cursor c = getReadableDatabase().rawQuery(sql,new String[]{String.valueOf(2)});
+        ArrayList<InventoryItems>list = new ArrayList<>();
+//        while(c.moveToNext()) {
+//            InventoryItems item = new InventoryItems();
+//            item.product_id = c.getInt(c.getColumnIndex("product_id"));
+//            item.product_name = c.getString(c.getColumnIndex("product_name"));
+//            item.unit_price = c.getFloat(c.getColumnIndex("unit_price"));
+//            item.qty_in_stock = c.getInt(c.getColumnIndex("opening_stock"));
+//            list.add(item);
+//        }
+//        c.close();
+        return list;
+    }
 
     public ArrayList<InventoryItems> getProductOutOfStockList(){
         String sql = "select * from inventory where qty_in_stock <=?";

@@ -24,9 +24,8 @@ public class AutocompleteAdapter extends ArrayAdapter<String> {
         final String item = getItem(position);
         TextView textView =new TextView(context);
         textView.setText(item);
-        textView.setPadding(10,10,10,10);
-        textView.setTextSize(18);
-
+        textView.setPadding(15,15,15,15);
+        textView.setTextSize(25);
         return textView;
     }
 

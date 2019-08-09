@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class ItemsListAdapter extends ArrayAdapter<InventoryItems> {
     Context context;
-    TextView itemName,stock,unit_price;
+    TextView itemName,stock,stockValue,purchasePrice,salePrice,asOfDate;
     ContentValues contentValues;
     Button save;
     private NotificationManagerCompat notificationManager;
@@ -31,12 +31,18 @@ public class ItemsListAdapter extends ArrayAdapter<InventoryItems> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View view = LayoutInflater.from(context).inflate(R.layout.activity_show_inventory,null);
         itemName = view.findViewById(R.id.itemname_listView);
-        unit_price= view.findViewById(R.id.unitprice_listView);
         stock = view.findViewById(R.id.qty_value_list);
+        stockValue=view.findViewById(R.id.stockValue_listView);
+        purchasePrice=view.findViewById(R.id.Purchaseprice_listView);
+        salePrice=view.findViewById(R.id.salePrice_value_list);
+        asOfDate=view.findViewById(R.id.asOfdATEdisplay);
         final InventoryItems item = getItem(position);
         itemName.setText(item.product_name);
-        unit_price.setText("Rs."+item.unit_price);
-        stock.setText(""+item.qty_in_stock);
+        purchasePrice.setText("Rs."+item.purchase_price);
+        salePrice.setText("Rs."+item.sale_price);
+        stock.setText(""+item.current_stock_qty);
+        stockValue.setText("Rs."+item.current_stock_qty*item.unit_price);
+        asOfDate.setText(item.AsOfDate);
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfitAndLoss"
+    android:orientation="vertical"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <TableRow
+                android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From:"
+                android:textSize="20dp"
+                android:padding="8dp"
+                android:textStyle="bold"
+                />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="from date"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:id="@+id/fromDate"
+
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_weight="1"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="To: "
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="to date"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                   android:id="@+id/toDate"
+                    />
+            </TableRow>
+
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+        <TableRow>
+            <TableRow
+                android:layout_weight="1"
+                android:layout_margin="2dp">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="Particulars"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:background="#BEBEBE"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_weight="1"
+                android:layout_margin="2dp">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="Amount"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:background="#BEBEBE"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    />
+            </TableRow>
+
+        </TableRow>
+        <TableRow>
+        <TableRow
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sale (+)"
+                android:textSize="20dp"
+                android:padding="8dp"
+                android:textColor="@android:color/black"
+
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs.20000"
+                android:textSize="20dp"
+                android:padding="8dp"
+                android:id="@+id/plSale"
+                android:textColor="@android:color/black"
+
+                />
+
+           </TableRow>
+        </TableRow>
+        <TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Indirect Income (+)"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:textColor="@android:color/black"
+
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs.1000"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:id="@+id/plIncome"
+                    android:textColor="@android:color/black"
+
+                    />
+
+            </TableRow>
+
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"></View>
+
+        <TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Net Revenue"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:textColor="#078238"
+                    android:textStyle="bold"
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. 21000"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:id="@+id/plNetRevenue"
+                    />
+
+            </TableRow>
+
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@android:color/darker_gray"></View>
+        <TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cr.Note/Sale Return (+)"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:textColor="@android:color/black"
+
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/plSalesReturn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:padding="8dp"
+                    android:text="Rs. 0"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp"
+
+                    />
+
+            </TableRow>
+        </TableRow>
+        <TableRow>
+            <TableRow
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Purchase (+)"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp"
+                     />
+
+            </TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. 2000"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:id="@+id/plPurchase"
+                    android:textColor="@android:color/black"
+
+                    />
+
+            </TableRow>
+
+        </TableRow>
+
+        <TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="opening stock (+)"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:textColor="@android:color/black"
+
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. 4000"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:id="@+id/plOpeningStock"
+                    android:textColor="@android:color/black"
+
+                    />
+
+            </TableRow>
+
+        </TableRow>
+        <TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dr.Note/Purchase Return (-)"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:textColor="@android:color/black"
+
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. 1000"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:id="@+id/plPurchaseReturn"
+                    android:textColor="@android:color/black"
+
+                    />
+
+            </TableRow>
+
+        </TableRow>
+        <TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Closing Stock (-)"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:textColor="@android:color/black"
+
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Rs. 1500"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp"
+                    android:id="@+id/plClosingStock"
+
+                    />
+
+            </TableRow>
+
+        </TableRow>
+
+        <TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Direct Expenses (-)"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:textColor="@android:color/black"
+
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs.500"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:id="@+id/plDirectExpenses"
+                    android:textColor="@android:color/black"
+
+                    />
+
+            </TableRow>
+
+
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@android:color/darker_gray"></View>
+
+        <TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cost of goods sold"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:textColor="#078238"
+                    android:textStyle="bold"
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs.3000"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:id="@+id/plCOGS"
+                    />
+
+            </TableRow>
+
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"></View>
+
+
+        <TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gross profit"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:textColor="#078238"
+                    android:textStyle="bold"
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. 18000"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:id="@+id/plGrossProfit"
+                    />
+
+            </TableRow>
+
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"></View>
+
+
+        <TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Operating Expenses (-)"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:textColor="@android:color/black"
+
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. 5000"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:textColor="@android:color/black"
+                    android:id="@+id/plOperatingExpenses"
+                    />
+
+            </TableRow>
+
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@android:color/darker_gray"></View>
+
+        <TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Operating Profit"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:textColor="#078238"
+                    android:textStyle="bold"
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. 13000"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:id="@+id/plOperatingProfit"
+                    />
+
+            </TableRow>
+
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@android:color/darker_gray"></View>
+
+        <TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Interest (-)"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:textColor="@android:color/black"
+
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. 2000"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:textColor="@android:color/black"
+                    android:id="@+id/plInterest"
+
+                    />
+
+            </TableRow>
+
+        </TableRow>
+        <TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="taxes(-)"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:textColor="@android:color/black"
+
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. 2000"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:id="@+id/plTaxes"
+                    android:textColor="@android:color/black"
+
+                    />
+
+            </TableRow>
+
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"></View>
+
+        <TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Net profit"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:textColor="#078238"
+                    android:textStyle="bold"
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs.9000"
+                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:id="@+id/plNetProfit"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    />
+
+            </TableRow>
+
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"></View>
+
+    </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

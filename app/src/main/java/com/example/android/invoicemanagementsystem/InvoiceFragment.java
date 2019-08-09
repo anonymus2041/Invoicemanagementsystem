@@ -16,7 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class InvoiceFragment extends Fragment {
-    InvoiceListAdapter adapter;
+    TransactionsAdapter adapter;
     ListView listView;
     DatabaseHelper databaseHelper;
     TextView purchase,sale;
@@ -26,7 +26,7 @@ public class InvoiceFragment extends Fragment {
         View view= inflater.inflate(R.layout.activity_invoice,container,false);
         listView = view.findViewById(R.id.my_list);
         databaseHelper = new DatabaseHelper(getActivity());
-        adapter = new InvoiceListAdapter(getActivity(),databaseHelper.getInvoiceList());
+        adapter = new TransactionsAdapter(getActivity(),databaseHelper.getTransactionsList());
         listView.setAdapter(adapter);
 
         purchase=(TextView) view.findViewById(R.id.purchase);

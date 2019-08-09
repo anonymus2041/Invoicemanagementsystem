@@ -27,12 +27,27 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:background="#29B6F6"
+                    android:background="#79e1ed"
                     android:text="Purchase"
                     android:textColor="@android:color/background_light"
                     android:textStyle="bold"
                     android:textSize="20dp"
                     android:textAlignment="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Purchase Invoice No."
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:id="@+id/enterPurchaseInvoiceNo"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -91,7 +106,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:background="#29B6F6"
+                    android:background="#79e1ed"
                     android:text="Item Details"
                     android:textColor="@android:color/background_light"
                     android:textStyle="bold"
@@ -100,7 +115,7 @@
                 <ListView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:id="@+id/listView_showInvoiceItems"
+                    android:id="@+id/listView_showPurchaseInvoiceItems"
                     android:visibility="gone"></ListView>
 
             </LinearLayout>
@@ -133,7 +148,7 @@
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentLeft="true"
                     android:id="@+id/fab_add_purchase"
-                    android:backgroundTint="#64DD17"
+                    android:backgroundTint="#12a35d"
                     />
 
                 <TextView
@@ -152,7 +167,7 @@
                     android:layout_alignParentRight="true"
                     android:text="Rs.0.00"
                     android:textSize="30dp"
-                    android:background="#81D4FA"
+                    android:background="#79e1ed"
                     android:layout_below="@+id/subtotal"
                     android:layout_marginTop="20dp"
                     android:textColor="#FFFFFF"
@@ -171,7 +186,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="#29B6F6"
+                android:background="#79e1ed"
                 android:text="Payment Details"
                 android:textColor="@android:color/background_light"
                 android:textStyle="bold"
@@ -184,13 +199,28 @@
                 android:textSize="16dp"
                 android:textStyle="bold"
                 android:paddingLeft="10dp"
-                android:paddingTop="5dp"/>
+                android:paddingTop="5dp"
+                android:id="@+id/enterPurchaseDiscount"/>
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:paddingLeft="10dp"
                 android:id="@+id/enter_discountPurchase"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Amount"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/enter_PurchaseTotal"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -248,11 +278,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="#64DD17"
+                android:background="#12a35d"
                 android:textColor="#FFFFFF"
                 android:text="save"
                 android:textStyle="bold"
-                android:id="@+id/saveInvoiceButton"/>
+                android:id="@+id/savePurchaseInvoiceButton"/>
         </LinearLayout>
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>

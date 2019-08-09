@@ -1,6 +1,7 @@
 package com.example.android.invoicemanagementsystem;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -29,7 +30,7 @@ public class PartyListAdapter extends ArrayAdapter<PartyInfo> {
          amount= view.findViewById(R.id.amountParty);
          date= view.findViewById(R.id.date);
          cashStatus = view.findViewById(R.id.cashStatus);
-         PartyInfo party = getItem(position);
+         final PartyInfo party = getItem(position);
          databaseHelper =new DatabaseHelper(context);
 
         name.setText(party.name);
@@ -37,16 +38,29 @@ public class PartyListAdapter extends ArrayAdapter<PartyInfo> {
 
         amount.setText("Rs."+party.opening_balance);
         if(party.toPay==1) {
-            cashStatus.setImageResource(R.drawable.down_arrow_round);
+            cashStatus.setImageResource(R.drawable.up_arrow_round);
         }
         if(party.toReceive==1)
         {
-            cashStatus.setImageResource(R.drawable.up_arrow_round);
+            cashStatus.setImageResource(R.drawable.down_arrow_round);
         }
 //        else
 //        {
 //            cashStatus.setImageResource(R.drawable.plus_round);
 //        }
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context,PartyDetails.class);
+                intent.putExtra("party_id",Integer.toString(party.party_id));
+                intent.putExtra("party_name",party.name);
+                intent.putExtra("opening_balance",String.valueOf(party.opening_balance));
+                intent.putExtra("to_receive",String.valueOf(party.toReceive));
+                intent.putExtra("to_pay",String.valueOf(party.toPay));
+                context.startActivity(intent);
+                //Toast.makeText(context,"opening= "+party.opening_balance,Toast.LENGTH_LONG).show();
+            }
+        });
         return view;
     }
 }

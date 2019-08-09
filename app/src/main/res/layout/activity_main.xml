@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:background=" #c5f9fc">
+                >
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -45,14 +45,30 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="To receive"
+                        android:textAllCaps="true"
                         android:textStyle="bold"
-                        android:padding="8dp"/>
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="8dp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="December"
+                        android:id="@+id/monthReceive"
+                        android:textSize="12dp"
+                        android:textStyle="italic" />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Rs.2000"
-                        android:textColor="#02b331"
+                        android:textStyle="bold"
+                        android:textColor="#08801a"
                         android:padding="8dp"
+                        android:id="@+id/receivable"
                         />
 
                 </LinearLayout>
@@ -78,15 +94,30 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="To pay"
+                            android:text="To Pay"
+                            android:textAllCaps="true"
                             android:textStyle="bold"
-                            android:padding="8dp"/>
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingTop="8dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="December"
+                            android:textSize="12dp"
+                            android:textStyle="italic"
+                            android:id="@+id/monthPay"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"/>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Rs.2000"
                             android:textColor="#f52b07"
+                            android:textStyle="bold"
                             android:padding="8dp"
+                            android:id="@+id/payable"
                             />
 
                     </LinearLayout>
@@ -113,16 +144,31 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Sale"
+                            android:text="sale"
+                            android:textAllCaps="true"
                             android:textStyle="bold"
-                            android:padding="8dp"/>
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingTop="8dp"
+                            />
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:text="December"
+                            android:id="@+id/monthSale"
+                            android:textSize="12dp"
+                            android:textStyle="italic"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"/>
+
+                        <TextView
+                            android:id="@+id/sale"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
                             android:text="Rs.2000"
                             android:textColor="#1e04b5"
-                            android:padding="8dp"
-                            />
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -148,13 +194,28 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Purchase"
+                            android:textAllCaps="true"
                             android:textStyle="bold"
-                            android:padding="8dp"/>
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingTop="8dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="December"
+                            android:id="@+id/monthPurchase"
+                            android:textSize="12dp"
+                            android:textStyle="italic"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"/>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Rs.2000"
+                            android:textStyle="bold"
                             android:textColor="#1e04b5"
+                            android:id="@+id/purchase"
                             android:padding="8dp"
                             />
 
@@ -181,15 +242,30 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Expenses"
+                            android:text="expenses"
+                            android:textAllCaps="true"
                             android:textStyle="bold"
-                            android:padding="8dp"/>
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingTop="8dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="December"
+                            android:id="@+id/monthExpenses"
+                            android:textSize="12dp"
+                            android:textStyle="italic"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"/>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Rs.2000"
                             android:textColor="#1e04b5"
+                            android:textStyle="bold"
                             android:padding="8dp"
+                            android:id="@+id/expenses"
                             />
 
                     </LinearLayout>

@@ -15,10 +15,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SelectUnit"></activity>
+        <activity android:name=".Expenses"></activity>
+        <activity android:name=".ProfitAndLoss" />
+        <activity android:name=".PartyDetails" />
+        <activity android:name=".SelectUnit" />
         <activity android:name=".PurchaseInvoice" />
         <activity android:name=".UpdateInventory" />
         <activity android:name=".customers" />
+        <activity android:name=".Income" />
+        <activity android:name=".Returns" />
+        <activity android:name=".InterestAndTaxes" />
         <activity
             android:name=".NavigartionDrawer"
             android:label="Invoice Management System"

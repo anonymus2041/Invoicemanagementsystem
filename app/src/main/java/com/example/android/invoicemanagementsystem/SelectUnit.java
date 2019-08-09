@@ -1,6 +1,7 @@
 package com.example.android.invoicemanagementsystem;
 
 import android.app.Dialog;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -28,6 +29,7 @@ public class SelectUnit extends AppCompatActivity {
     InventoryFragment inventoryFragment;
     String conversionUnitValue;
     Bundle bundle;
+    SharedPreferences preferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -97,12 +99,7 @@ public class SelectUnit extends AppCompatActivity {
         saveUnits.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//            bundle= new Bundle();
-//            bundle.putString("primaryUnit",primaryUnit);
-////            bundle.putString("secUnit",secUnit);
-////            bundle.putString("conversion",conversionUnit.getText().toString());
-//            inventoryFragment=new InventoryFragment();
-//            inventoryFragment.setArguments(bundle);
+
             SelectUnit.this.finish();
             }
         });
@@ -123,27 +120,23 @@ public class SelectUnit extends AppCompatActivity {
         TextView sec= view.findViewById(R.id.SecondaryU);
         primary.setText(primaryUnit);
         sec.setText(secUnit);
+        preferences = getSharedPreferences("conversionUnit",0);
+        SharedPreferences.Editor editor=preferences.edit();
         saveConversionUnit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                preferences = getSharedPreferences("conversionUnit",0);
+                SharedPreferences.Editor editor=preferences.edit();
+                editor.putString("primaryUnit",primaryUnit);
+                editor.putString("secUnit",secUnit);
+                editor.putString("conversionUnit",conversionUnit.getText().toString());
+                editor.apply();
                 showConvSummary.setText("1 "+primaryUnit+" = "+conversionUnit.getText().toString()+" "+secUnit);
                 dialog.dismiss();
             }
         });
 
         dialog.show();
-    }
-    public String getPrimaryUnit()
-    {
-        return primaryUnit;
-    }
-    public String getSecUnit()
-    {
-        return secUnit;
-    }
-    public String getconversionUnit()
-    {
-        return conversionUnitValue;
     }
 
 }

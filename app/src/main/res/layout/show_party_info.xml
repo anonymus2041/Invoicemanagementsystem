@@ -9,10 +9,15 @@
 
     >
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.3"
+        android:layout_weight="0.1"
         android:orientation="vertical"
+        android:layout_gravity="center"
         >
 
         <ImageView
@@ -37,48 +42,53 @@
             android:textStyle="bold|italic"
             android:text="hello"
             android:paddingTop="5dp"
-            android:textAllCaps="true"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:padding="5dp"
-            android:textColor="@android:color/holo_blue_light"
+            android:textAllCaps="true"
+
             />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="5dp">
             <TextView
                 android:id="@+id/date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Date: "
                 android:paddingLeft="5dp"
-                android:textStyle="bold|italic"
+                android:textStyle="italic"
                 android:textSize="15dp"
                 android:layout_marginBottom="10dp"
                 />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Amount"
+                    android:textSize="20dp"
+                    android:id="@+id/amountParty"
+                    android:textStyle="bold|italic"
+                    android:textColor="#30a13f"
+                    android:layout_marginBottom="10dp"
+                    />
+            </LinearLayout>
 
         </LinearLayout>
 
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.8"
-        android:orientation="vertical"
-        >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Amount"
-            android:textSize="20dp"
-            android:paddingTop="10dp"
-            android:id="@+id/amountParty"
-            android:textStyle="bold|italic"
-            android:textColor="#30a13f"
-            />
     </LinearLayout>
-
 
 </LinearLayout>

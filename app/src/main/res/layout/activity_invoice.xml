@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/oval_shape"
-                android:backgroundTint="#fa8b0c"
+                android:backgroundTint="#c72014"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/oval_shape"
-                android:backgroundTint="#337bf5"
+                android:backgroundTint="#12a35d"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -93,7 +93,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/view"
-            android:background="#FFFFFF"></ListView>
+            android:background="#FFFFFF"
+            android:divider="#fff2f5"
+            android:dividerHeight="10.0sp"></ListView>
 
         <!--<android.support.design.widget.FloatingActionButton-->
 

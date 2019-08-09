@@ -41,8 +41,8 @@ public class InvoiceDetails extends AppCompatActivity {
     String selectedItem;
     TextView subTotalAmount;
     InvoiceItemsListAdapter invoiceItemsListAdapter;
-    int qtyOfItemInInvoice;
-    int finalQty;
+    float qtyOfItemInInvoice;
+    float finalQty;
     InventoryItems checkOutOfStock;
     ArrayList<InventoryItems> listOutOfStock;
     @Override
@@ -163,11 +163,11 @@ public class InvoiceDetails extends AppCompatActivity {
 
                 contentValues1=new ContentValues();
                 updateItem= databaseHelper.getItemNameForInvoice(String.valueOf(items.product_id));
-                qtyOfItemInInvoice = Integer.parseInt(qty.getText().toString());
-                finalQty=updateItem.qty_in_stock-qtyOfItemInInvoice;
+                qtyOfItemInInvoice = Float.parseFloat(qty.getText().toString());
+                finalQty=updateItem.opening_stock-qtyOfItemInInvoice;
                 contentValues1.put("product_name",itemName.getText().toString());
                 contentValues1.put("unit_price",items.unit_price);
-                contentValues1.put("qty_in_stock",Integer.toString(finalQty));
+                contentValues1.put("opening_stock",Float.toString(finalQty));
                 databaseHelper.updateInventoryStock(String.valueOf(items.product_id),contentValues1);
                 dialog.dismiss();
             }

@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -19,7 +20,6 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -39,8 +39,7 @@ public class InventoryFragment extends Fragment {
     DatePickerDialog.OnDateSetListener setListener;
     Button selectUnit,saveToInventory;
     String primaryUnit,secUnit,conversionUnit;
-    SelectUnit selectUnitActivity;
-
+    SharedPreferences preferences;
 
     @Nullable
     @Override
@@ -50,12 +49,10 @@ public class InventoryFragment extends Fragment {
         listView = (ListView) view.findViewById(R.id.inventory_list_view);
         adapter = new ItemsListAdapter(getActivity(),databaseHelper.getItemslist());
         listView.setAdapter(adapter);
-        selectUnitActivity=new SelectUnit();
-        primaryUnit=selectUnitActivity.getPrimaryUnit();
-        secUnit=selectUnitActivity.getSecUnit();
-        conversionUnit=selectUnitActivity.getconversionUnit();
-        Toast toast=Toast.makeText(getActivity(),"primaryUnit= "+primaryUnit,Toast.LENGTH_LONG);
-        toast.show();
+
+//
+//        Toast toast=Toast.makeText(getActivity(),"primaryUnit= "+primaryUnit,Toast.LENGTH_LONG);
+//        toast.show();
 
         FloatingActionButton addInventoryItems = (FloatingActionButton) view.findViewById(R.id.fab_add_inventory);
         addInventoryItems.setOnClickListener(new View.OnClickListener() {
@@ -121,6 +118,13 @@ public class InventoryFragment extends Fragment {
         saveToInventory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                preferences=getActivity().getSharedPreferences("conversionUnit",0);
+
+                primaryUnit=preferences.getString("primaryUnit","");
+                secUnit=preferences.getString("secUnit","");
+                conversionUnit=preferences.getString("conversionUnit","");
+                Float stockValue=Float.parseFloat(OpeningStock.getText().toString())*
+                        Float.parseFloat(UnitPrice.getText().toString());
                 contentValues.put("product_name",itemName.getText().toString());
                 contentValues.put("primary_unit",primaryUnit);
                 contentValues.put("secondary_unit",secUnit);
@@ -131,6 +135,9 @@ public class InventoryFragment extends Fragment {
                 contentValues.put("AsOfDate",asOfDate.getText().toString());
                 contentValues.put("unit_price",UnitPrice.getText().toString());
                 contentValues.put("minStockQty",MinStockValue.getText().toString());
+                contentValues.put("current_stock_qty",OpeningStock.getText().toString());
+                contentValues.put("stock_value",String.valueOf(stockValue));
+
                 databaseHelper.insertItem(contentValues);
 
                 dialog.dismiss();
